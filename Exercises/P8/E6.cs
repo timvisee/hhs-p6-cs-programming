@@ -25,7 +25,7 @@ namespace hhs_p6_cs_programming.exercises.p8 {
         /// <summary>
         /// Car class.
         /// </summary>
-        public class Car {
+        private class Car {
 
             /// <summary>
             /// Miles per gallon this car drives.
