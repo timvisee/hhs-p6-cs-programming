@@ -1,7 +1,9 @@
 ﻿using System;
 
 namespace hhs_p6_cs_programming {
-    public class Exercise_6_2 {
+    public class Exercise_6_2 : BaseExercise {
+
+        public override string ExerciseIdentifier { get { return "6.2"; } }
 
         /// <summary>
         /// Integer array this class works with.
@@ -11,10 +13,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Method to run the exercise.
         /// </summary>
-        public static void Run() {
-            // Print the exercise
-            Console.WriteLine("Exercise 6.2:");
-
+        public override void Run() {
             // Build the array and print it
             BuildArray();
             PrintArray("Initial array");
@@ -39,7 +38,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Build and fill the integer array.
         /// </summary>
-        private static void BuildArray() {
+        private void BuildArray() {
             // Create a new random object
             Random rand = new Random();
 
@@ -54,7 +53,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Print the current array in the console.
         /// </summary>
-        private static void PrintArray(string message) {
+        private void PrintArray(string message) {
             // Print the message and the array to the console
             Console.WriteLine("{0}:\n{1}\n", message, string.Join(", ", _intArray));
         }
@@ -62,7 +61,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Flip the first number in an integer array with the last.
         /// </summary>
-        private static void FlipFirstLast() {
+        private void FlipFirstLast() {
             // Store the first variable
             int first = _intArray[0];
 
@@ -74,7 +73,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Rotate the array.
         /// </summary>
-        private static void Rotate() {
+        private void Rotate() {
             // Store the last value
             int last = _intArray[_intArray.Length - 1];
 
@@ -89,7 +88,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Repalce all even elements with zero.
         /// </summary>
-        private static void ZeroEven() {
+        private void ZeroEven() {
             // Loop thorugh the array
             for(var i = 0; i < _intArray.Length; i++)
                 // Replace even elements with zero
@@ -101,7 +100,7 @@ namespace hhs_p6_cs_programming {
         /// Replace each element with the largest of it's two neighbors.
         /// The first and last element are ignored.
         /// </summary>
-        private static void LargestNeighbor() {
+        private void LargestNeighbor() {
             // Loop through the elements, and choose the largest neighbor
             for(var i = 1; i < _intArray.Length - 1; i++)
                 _intArray[i] = Math.Max(_intArray[i - 1], _intArray[i + 1]);
