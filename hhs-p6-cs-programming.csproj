@@ -36,10 +36,10 @@
     <Compile Include="BaseExercise.cs" />
     <Compile Include="Exercises\P6\E2.cs" />
     <Compile Include="Exercises\P6\E26.cs" />
+    <Compile Include="Exercises\P8\E6.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Exercises" />
     <Folder Include="Exercises\P6" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
