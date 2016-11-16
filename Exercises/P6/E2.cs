@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace hhs_p6_cs_programming {
-    public class Exercise_6_2 : BaseExercise {
+namespace hhs_p6_cs_programming.exercises.p6 {
+    public class E2 : BaseExercise {
 
         protected override string ExerciseIdentifier { get { return "6.2"; } }
 

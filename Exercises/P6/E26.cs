@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace hhs_p6_cs_programming {
-    public class Exercise_6_26 : BaseExercise {
+namespace hhs_p6_cs_programming.exercises.p6 {
+    public class E26 : BaseExercise {
 
         protected override string ExerciseIdentifier { get { return "6.26"; } }
 

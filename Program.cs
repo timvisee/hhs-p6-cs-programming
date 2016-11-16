@@ -15,8 +15,8 @@ namespace hhs_p6_cs_programming {
             // Print the program name
             Console.WriteLine("{0}\n", AppName);
 
-            // Create a new exercise instance
-            new Exercise_6_2().Start();
+            // Create and run an exercise
+            new hhs_p6_cs_programming.exercises.p6.E2().Start();
         }
 
     }
