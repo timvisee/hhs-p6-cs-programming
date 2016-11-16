@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace hhs_p6_cs_programming {
     public class Exercise_6_26 : BaseExercise {
 
-        public override string ExerciseIdentifier { get { return "6.26"; } }
+        protected override string ExerciseIdentifier { get { return "6.26"; } }
 
         /// <summary>
         /// First list.
@@ -19,7 +19,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Method to run the exercise.
         /// </summary>
-        public override void Run() {
+        protected override void Run() {
             // Print the exercise
             Console.WriteLine("Exercise 6.26:");
 

@@ -3,7 +3,7 @@
 namespace hhs_p6_cs_programming {
     public class Exercise_6_2 : BaseExercise {
 
-        public override string ExerciseIdentifier { get { return "6.2"; } }
+        protected override string ExerciseIdentifier { get { return "6.2"; } }
 
         /// <summary>
         /// Integer array this class works with.
@@ -13,7 +13,7 @@ namespace hhs_p6_cs_programming {
         /// <summary>
         /// Method to run the exercise.
         /// </summary>
-        public override void Run() {
+        protected override void Run() {
             // Build the array and print it
             BuildArray();
             PrintArray("Initial array");
