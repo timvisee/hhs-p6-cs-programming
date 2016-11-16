@@ -44,7 +44,7 @@ namespace hhs_p6_cs_programming {
 
             // Fill the list with 8 items
             for(int i = 0; i < 8; i++)
-                list.Add(rand.Next(100));
+                list.Add(rand.Next(10, 100));
         }
 
         /// <summary>

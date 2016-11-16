@@ -45,7 +45,7 @@ namespace hhs_p6_cs_programming {
 
             // Fill the array with random numbers
             for(var i = 0; i < _intArray.Length; i++)
-                _intArray[i] = rand.Next(100);
+                _intArray[i] = rand.Next(10, 100);
         }
 
         /// <summary>
