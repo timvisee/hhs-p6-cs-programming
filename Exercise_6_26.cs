@@ -26,16 +26,19 @@ namespace hhs_p6_cs_programming {
             // Build two list
             BuildList(_a);
             BuildList(_b);
+            PrintList(_a);
+            PrintList(_b);
 
             // Append B to A
             Append(_a, _b);
+            PrintList(_a);
         }
 
         /// <summary>
         /// Print the given list.
         /// </summary>
         /// <param name="list">List to print.</param>
-        private void PrintArray(List<int> list) {
+        private void PrintList(List<int> list) {
             Console.WriteLine(string.Join(", ", list));
         }
 
