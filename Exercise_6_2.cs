@@ -9,9 +9,12 @@ namespace hhs_p6_cs_programming {
         private static int[] _intArray;
 
         /// <summary>
-        /// Main method, called on start.
+        /// Method to run the exercise.
         /// </summary>
-        public static void Main() {
+        public static void Run() {
+            // Print the exercise
+            Console.WriteLine("Exercise 6.2:");
+
             // Build the array and print it
             BuildArray();
             PrintArray("Initial array");
