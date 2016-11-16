@@ -9,12 +9,17 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         /// <summary>
         /// First list.
         /// </summary>
-        private List<int> _a = new List<int>();
+        private readonly List<int> _a = new List<int>();
 
         /// <summary>
         /// Second list.
         /// </summary>
-        private List<int> _b = new List<int>();
+        private readonly List<int> _b = new List<int>();
+
+        /// <summary>
+        /// Random generator.
+        /// </summary>
+        private static readonly Random Rand = new Random();
 
         /// <summary>
         /// Method to run the exercise.
@@ -47,12 +52,9 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         /// </summary>
         /// <param name="list">List to fill.</param>
         private void BuildList(List<int> list) {
-            // Create a random object
-            Random rand = new Random();
-
             // Fill the list with 8 items
             for(int i = 0; i < 8; i++)
-                list.Add(rand.Next(10, 100));
+                list.Add(Rand.Next(10, 100));
         }
 
         /// <summary>

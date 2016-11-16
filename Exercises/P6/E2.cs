@@ -11,6 +11,11 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         private static int[] _intArray;
 
         /// <summary>
+        /// Random generator.
+        /// </summary>
+        private static readonly Random Rand = new Random();
+
+        /// <summary>
         /// Method to run the exercise.
         /// </summary>
         protected override void Run() {
@@ -39,15 +44,12 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         /// Build and fill the integer array.
         /// </summary>
         private void BuildArray() {
-            // Create a new random object
-            Random rand = new Random();
-
             // Create a new int array
             _intArray = new int[8];
 
             // Fill the array with random numbers
             for(var i = 0; i < _intArray.Length; i++)
-                _intArray[i] = rand.Next(10, 100);
+                _intArray[i] = Rand.Next(10, 100);
         }
 
         /// <summary>
