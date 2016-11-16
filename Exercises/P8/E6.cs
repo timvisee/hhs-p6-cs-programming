@@ -19,7 +19,7 @@ namespace hhs_p6_cs_programming.exercises.p8 {
             car.Drive(100);
 
             // Print the fuel remaining
-            Console.WriteLine("Fuel remaining: {0}", car.GetGas());
+            Console.WriteLine("Fuel remaining: {0} gallons", car.GetGas());
         }
 
         /// <summary>
