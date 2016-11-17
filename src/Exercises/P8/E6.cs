@@ -3,7 +3,11 @@
 namespace hhs_p6_cs_programming.exercises.p8 {
     public class E6 : BaseExercise {
 
-        protected override string ExerciseIdentifier { get { return "P8.6"; } }
+        protected override string ExerciseIdentifier {
+            get {
+                return "P8.6";
+            }
+        }
 
         /// <summary>
         /// Method to run the exercise.

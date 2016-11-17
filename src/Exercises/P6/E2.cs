@@ -3,7 +3,11 @@
 namespace hhs_p6_cs_programming.exercises.p6 {
     public class E2 : BaseExercise {
 
-        protected override string ExerciseIdentifier { get { return "P6.2"; } }
+        protected override string ExerciseIdentifier {
+            get {
+                return "P6.2";
+            }
+        }
 
         /// <summary>
         /// Integer array this class works with.
@@ -113,7 +117,8 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         private void ZeroEven() {
             // Loop thorugh the array
             for(var i = 0; i < _intArray.Length; i++)
-                // Replace even elements with zero
+
+            // Replace even elements with zero
                 if(_intArray[i] % 2 == 0)
                     _intArray[i] = 0;
         }
@@ -141,8 +146,8 @@ namespace hhs_p6_cs_programming.exercises.p6 {
             // Fill the array
             for(var i = 0; i < buff.Length; i++)
                 buff[i] = i < buff.Length / 2
-                                  ? buff[i] = _intArray[i]
-                                  : _intArray[_intArray.Length - (buff.Length - i)];
+                              ? buff[i] = _intArray[i]
+                              : _intArray[_intArray.Length - (buff.Length - i)];
 
             // Apply the buffer
             _intArray = buff;
@@ -183,8 +188,7 @@ namespace hhs_p6_cs_programming.exercises.p6 {
                 if(_intArray[i] >= l) {
                     s = l;
                     l = _intArray[i];
-
-                }  else if(_intArray[i] > s)
+                } else if(_intArray[i] > s)
                     s = _intArray[i];
 
             // Return the second largest value
@@ -226,7 +230,8 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         private bool ContainsNonAdjacentDuplicate() {
             // Check whether non-adjacent values are equal
             for(var i = 2; i < _intArray.Length; i++)
-                // Loop through the items before this, except the adjacent one
+
+            // Loop through the items before this, except the adjacent one
                 for(var j = 0; j < i - 1; j++)
                     if(_intArray[i] == _intArray[j])
                         return true;
