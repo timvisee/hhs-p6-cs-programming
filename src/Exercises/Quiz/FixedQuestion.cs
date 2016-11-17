@@ -63,6 +63,46 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             return true;
         }
 
+        /// <summary>
+        /// Check whether the given answer, as a string, is correct.
+        /// </summary>
+        /// <param name="answer">Answer as a string.</param>
+        /// <returns>True if the answer is correct, false if not.</returns>
+        public bool IsCorrectAnswer(string answer) {
+            // Trim the answer
+            answer = answer.Trim();
+
+            // Create a variable for the answer index
+            int answerIndex;
+
+            // Check whether the given input is valid
+            bool valid = Int32.TryParse(answer, out answerIndex);
+
+            // Make sure the answer index is in-bound
+            if(valid)
+                valid = answerIndex >= 0 && answerIndex < _answers.Count;
+
+            // Show a warning if the input is invalid, and ask for new input
+            if(!valid) {
+                // Show an invalid input warning and return
+                Console.WriteLine("Invalid input!\n");
+                return HandleAnswer();
+            }
+
+            // Check whether the answer is correct
+            bool correct = _answers[answerIndex].IsCorrect();
+
+            // Check whether the answer is correct
+            if(correct)
+                // Show the result
+                Console.WriteLine("Correct!");
+            else
+                Console.WriteLine("Wrong answer!");
+
+            // Return the result
+            return correct;
+        }
+
         public override bool IsConfigured() {
             // At least one answer must be configured
             if(_answers.Count <= 0)
