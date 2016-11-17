@@ -44,6 +44,10 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         /// Run the quiz.
         /// </summary>
         public void RunQuiz() {
+            // Keep track of the number of correct answers and total questions
+            int correct = 0;
+            int total = 0;
+
             // Loop through the questions
             for(var i = 0; i < _questions.Count; i++) {
                 // Get the question
@@ -55,9 +59,20 @@ namespace hhs_p6_cs_programming.exercises.quiz {
                     continue;
                 }
 
-                // Print the question and answers
-                question.DoQuestion();
+                // Increase the question counter
+                total++;
+
+                // Do the question, and handle the output
+                if(question.DoQuestion())
+                    correct++;
             }
+
+            // Print the quiz footer
+            Console.WriteLine(
+                              "Quiz finished! You had {0} of {1} questions correct.",
+                              correct.ToString(),
+                              total.ToString()
+                             );
         }
 
     }
