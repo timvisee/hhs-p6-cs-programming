@@ -52,6 +52,9 @@ namespace hhs_p6_cs_programming.exercises.p6 {
 
             // Is array sorted
             Console.WriteLine("H. Is sorted: {0}\n", IsSorted());
+
+            // Contains adjacent duplicates
+            Console.WriteLine("I. Contains adjacent duplicate: {0}\n", ContainsAdjacentDuplicate());
         }
 
         /// <summary>
@@ -197,6 +200,20 @@ namespace hhs_p6_cs_programming.exercises.p6 {
 
             // The array seems to be sorted
             return true;
+        }
+
+        /// <summary>
+        /// Check whether the array contains any adjacent duplicate values.
+        /// </summary>
+        /// <returns>True if it contains adjacent duplicate values.</returns>
+        private bool ContainsAdjacentDuplicate() {
+            // Check whether adjacent values are equal
+            for(var i = 1; i < _intArray.Length; i++)
+                if(_intArray[i - 1] == _intArray[i])
+                    return true;
+
+            // Doesn't seem to contain adjacent duplicates, return
+            return false;
         }
 
     }
