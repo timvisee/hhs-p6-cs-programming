@@ -34,12 +34,13 @@ namespace hhs_p6_cs_programming.exercises.quiz {
 
         public override void ShowInputPossibilities() {
             // Show the input header
-            Console.WriteLine("Possible answers:");
+            Console.Write("A:");
 
             // Show the answers
             for(var i = 0; i < _answers.Count; i++)
                 Console.WriteLine(
-                                  " {0}. {1}",
+                                  "{0} {1}. {2}",
+                                  i != 0 ? "  " : "",
                                   (i + 1).ToString(),
                                   _answers[i].GetAnswer()
                                  );
