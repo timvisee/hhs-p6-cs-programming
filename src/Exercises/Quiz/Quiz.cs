@@ -53,8 +53,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
                 }
 
                 // Print the question and answers
-                question.ShowQuestion();
-                question.ShowInputHint();
+                question.DoQuestion();
             }
         }
 

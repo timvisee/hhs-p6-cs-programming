@@ -32,9 +32,19 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             return _answers;
         }
 
+        public override void ShowInputPosibilities() {}
+
         public override void ShowInputHint() {
-            // Print the footer
             Console.Write("Enter your answer [answer/CRTL+C]: ");
+        }
+
+        public override bool HandleAnswer() {
+            // Print the input hint
+            ShowInputHint();
+
+            // TODO: Parse the answer input
+            Console.ReadLine();
+            return true;
         }
 
         public override bool IsConfigured() {

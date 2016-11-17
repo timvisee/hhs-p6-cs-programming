@@ -32,7 +32,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             return _answers;
         }
 
-        public override void ShowInputHint() {
+        public override void ShowInputPossibilities() {
             // Show the input header
             Console.WriteLine("Possible answers:");
 
@@ -43,12 +43,23 @@ namespace hhs_p6_cs_programming.exercises.quiz {
                                   (i + 1).ToString(),
                                   _answers[i].GetAnswer()
                                  );
+        }
 
+        public override void ShowInputHint() {
             // Determine what the input string should be
             string inputString = _answers.Count == 1 ? "1" : string.Format("1-{0}", _answers.Count);
 
             // Print the footer
             Console.Write("Enter your answer [{0}/CRTL+C]: ", inputString);
+        }
+
+        public override bool HandleAnswer() {
+            // Print the input hint
+            ShowInputHint();
+
+            // TODO: Parse the answer input
+            Console.ReadLine();
+            return true;
         }
 
         public override bool IsConfigured() {
