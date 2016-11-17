@@ -45,6 +45,7 @@
     <Compile Include="src\Exercises\Quiz\OpenQuestion.cs" />
     <Compile Include="src\Exercises\Quiz\Quiz.cs" />
     <Compile Include="src\Program.cs" />
+    <Compile Include="src\Util\ListUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />

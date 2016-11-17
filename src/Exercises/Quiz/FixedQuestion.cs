@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using hhs_p6_cs_programming.Util;
 
 namespace hhs_p6_cs_programming.exercises.quiz {
     public class FixedQuestion : BaseQuestion {
@@ -33,6 +34,9 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         }
 
         public override void ShowInputPossibilities() {
+            // Shuffle the answers
+            _answers.Shuffle();
+
             // Show the input header
             Console.Write("A:");
 
