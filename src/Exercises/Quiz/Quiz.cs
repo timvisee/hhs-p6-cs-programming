@@ -21,17 +21,23 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         /// </summary>
         protected override void Run() {
             // Add some test questions
-            List<FixedAnswer> answers = new List<FixedAnswer>();
-            answers.Add(new FixedAnswer("Answer 1", false));
-            answers.Add(new FixedAnswer("Answer 2", false));
-            answers.Add(new FixedAnswer("Answer 3", true));
-            answers.Add(new FixedAnswer("Answer 4", false));
+            List<FixedAnswer> fixedAnswers = new List<FixedAnswer>();
+            fixedAnswers.Add(new FixedAnswer("Answer 1", false));
+            fixedAnswers.Add(new FixedAnswer("Answer 2", false));
+            fixedAnswers.Add(new FixedAnswer("Answer 3", true));
+            fixedAnswers.Add(new FixedAnswer("Answer 4", false));
 
-            // Create a question
-            FixedQuestion question = new FixedQuestion("Question 1", answers);
+            // Create a question and add it to the list
+            _questions.Add(new FixedQuestion("Question 1", fixedAnswers));
 
-            // Add the question
-            _questions.Add(question);
+            List<OpenAnswer> openAnswers = new List<OpenAnswer>();
+            openAnswers.Add(new OpenAnswer("Answer 1", false));
+            openAnswers.Add(new OpenAnswer("Answer 2", false));
+            openAnswers.Add(new OpenAnswer("Answer 3", true));
+            openAnswers.Add(new OpenAnswer("Answer 4", false));
+
+            // Create a question and add it to the list
+            _questions.Add(new OpenQuestion("Question 2", openAnswers));
 
             // Run the quiz
             RunQuiz();
