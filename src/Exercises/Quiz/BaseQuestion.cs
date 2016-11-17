@@ -65,7 +65,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
 
             } catch(Exception) {
                 // Show an invalid input warning
-                Console.WriteLine("Invalid input!\n");
+                Console.WriteLine("\nInvalid input!");
 
                 // Recursivly call itself, to ask for new input
                 return HandleAnswer();
