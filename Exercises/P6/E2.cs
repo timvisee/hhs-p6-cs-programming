@@ -42,6 +42,10 @@ namespace hhs_p6_cs_programming.exercises.p6 {
             // Trim the middle element
             TrimMiddle();
             PrintArray("E. Trim middle");
+
+            // Promote even elements
+            PromoteEven();
+            PrintArray("F. Promote even");
         }
 
         /// <summary>
@@ -118,18 +122,40 @@ namespace hhs_p6_cs_programming.exercises.p6 {
         ///
         /// Note: The array must contain at least 3 elements.
         /// </summary>
-        public void TrimMiddle() {
-            // Define a new array with the correct (trimmed) size
-            int[] newArray = new int[_intArray.Length - 2 + (_intArray.Length % 2)];
+        private void TrimMiddle() {
+            // Define a buffer array for the operation, with the trimmed size
+            int[] buff = new int[_intArray.Length - 2 + (_intArray.Length % 2)];
 
             // Fill the array
-            for(var i = 0; i < newArray.Length; i++)
-                newArray[i] = i < newArray.Length / 2
-                                  ? newArray[i] = _intArray[i]
-                                  : _intArray[_intArray.Length - (newArray.Length - i)];
+            for(var i = 0; i < buff.Length; i++)
+                buff[i] = i < buff.Length / 2
+                                  ? buff[i] = _intArray[i]
+                                  : _intArray[_intArray.Length - (buff.Length - i)];
 
-            // Update the array
-            _intArray = newArray;
+            // Apply the buffer
+            _intArray = buff;
+        }
+
+        /// <summary>
+        /// Promote all even elements of the array, and move them to the front.
+        /// </summary>
+        private void PromoteEven() {
+            // Define a buffer array for the operation, and a variable to store the current array index
+            int[] buff = new int[_intArray.Length];
+            int n = 0;
+
+            // Put all even elements in the front
+            foreach(int e in _intArray)
+                if(e % 2 == 0)
+                    buff[n++] = e;
+
+            // Put the other elements behind it
+            foreach(int e in _intArray)
+                if(e % 2 != 0)
+                    buff[n++] = e;
+
+            // Apply the buffer
+            _intArray = buff;
         }
 
     }
