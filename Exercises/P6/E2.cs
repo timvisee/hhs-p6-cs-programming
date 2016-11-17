@@ -48,7 +48,10 @@ namespace hhs_p6_cs_programming.exercises.p6 {
             PrintArray("F. Promote even");
 
             // Get second largest
-            Console.WriteLine("G. Second largest: {0}", GetSecondLargest());
+            Console.WriteLine("G. Second largest: {0}\n", GetSecondLargest());
+
+            // Is array sorted
+            Console.WriteLine("H. Is sorted: {0}\n", IsSorted());
         }
 
         /// <summary>
@@ -180,6 +183,20 @@ namespace hhs_p6_cs_programming.exercises.p6 {
 
             // Return the second largest value
             return s;
+        }
+
+        /// <summary>
+        /// Check whether the array elements are sorted in increasing order.
+        /// </summary>
+        /// <returns>True if sorted, false if not.</returns>
+        private bool IsSorted() {
+            // The array isn't sorted if the previous element is larger than the current
+            for(var i = 1; i < _intArray.Length; i++)
+                if(_intArray[i - 1] > _intArray[i])
+                    return false;
+
+            // The array seems to be sorted
+            return true;
         }
 
     }
