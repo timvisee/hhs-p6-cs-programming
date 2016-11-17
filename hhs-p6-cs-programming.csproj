@@ -41,6 +41,8 @@
     <Compile Include="src\Exercises\Quiz\BaseQuestion.cs" />
     <Compile Include="src\Exercises\Quiz\FixedAnswer.cs" />
     <Compile Include="src\Exercises\Quiz\FixedQuestion.cs" />
+    <Compile Include="src\Exercises\Quiz\OpenAnswer.cs" />
+    <Compile Include="src\Exercises\Quiz\OpenQuestion.cs" />
     <Compile Include="src\Exercises\Quiz\Quiz.cs" />
     <Compile Include="src\Program.cs" />
   </ItemGroup>

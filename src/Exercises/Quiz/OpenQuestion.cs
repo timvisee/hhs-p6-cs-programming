@@ -7,7 +7,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         /// <summary>
         /// List of possible answers, as strings.
         /// </summary>
-        private List<string> _answers = new List<string>();
+        private List<OpenAnswer> _answers = new List<OpenAnswer>();
 
         /// <summary>
         /// Constructor.
@@ -20,7 +20,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         /// </summary>
         /// <param name="question">Question.</param>
         /// <param name="answers">List of answers.</param>
-        public OpenQuestion(string question, List<string> answers) : base(question) {
+        public OpenQuestion(string question, List<OpenAnswer> answers) : base(question) {
             _answers = answers;
         }
 
@@ -28,23 +28,30 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         /// Get the list of answers.
         /// </summary>
         /// <returns>Answers.</returns>
-        public List<string> GetAnswers() {
+        public List<OpenAnswer> GetAnswers() {
             return _answers;
         }
 
-        public override void ShowInputPosibilities() {}
-
-        public override void ShowInputHint() {
-            Console.Write("Enter your answer [answer/CRTL+C]: ");
+        public override void ShowInputPossibilities() {
+            Console.WriteLine("A: Enter your own answer...");
         }
 
-        public override bool HandleAnswer() {
-            // Print the input hint
-            ShowInputHint();
+        public override void ShowInputHint() {
+            Console.Write("Your answer [answer/CRTL+C]: ");
+        }
 
-            // TODO: Parse the answer input
-            Console.ReadLine();
-            return true;
+        public override bool IsCorrectAnswer(string answer) {
+            // Make sure anything is given
+            if(answer.Trim().Length == 0)
+                throw new Exception("No answer given");
+
+            // Loop through the answers, and check whether the given answer is correct
+            foreach(OpenAnswer a in _answers)
+                if(a.IsCorrectAnswer(answer))
+                    return true;
+
+            // The answer doesn't seem to be valid
+            return false;
         }
 
         public override bool IsConfigured() {
@@ -52,11 +59,10 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             if(_answers.Count <= 0)
                 return false;
 
-            // TODO: Make sure at least one of the answers is correct!
-//            // Make sure at least one of the answers is correct
-//            foreach(FixedAnswer answer in _answers)
-//                if(answer.IsCorrect())
-//                    return true;
+            // Make sure at least one of the answers is correct
+            foreach(OpenAnswer a in _answers)
+                if(a.IsCorrect())
+                    return true;
 
             // No answer seems to be correct, the question is not configured properly
             return false;

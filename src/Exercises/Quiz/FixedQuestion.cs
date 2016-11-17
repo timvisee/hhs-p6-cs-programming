@@ -51,7 +51,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             string inputString = _answers.Count == 1 ? "1" : string.Format("1-{0}", _answers.Count);
 
             // Print the footer
-            Console.Write("Enter your answer [{0}/CRTL+C]: ", inputString);
+            Console.Write("Your answer [{0}/CRTL+C]: ", inputString);
         }
 
         public override bool IsCorrectAnswer(string answer) {
@@ -74,7 +74,6 @@ namespace hhs_p6_cs_programming.exercises.quiz {
 
             // Check whether the answer is correct
             bool correct = _answers[answerIndex - 1].IsCorrect();
-
 
             // Return the result
             return correct;
