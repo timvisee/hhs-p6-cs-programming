@@ -1,0 +1,13 @@
+version: 0.0.1.{build}
+
+configuration:
+- Debug
+- Release
+
+platform:
+- x86
+- x64
+
+build:
+  parallel: true
+  verbosity: minimal
