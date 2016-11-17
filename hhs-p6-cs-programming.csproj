@@ -33,19 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BaseExercise.cs" />
-    <Compile Include="Exercises\P6\E2.cs" />
-    <Compile Include="Exercises\P6\E26.cs" />
-    <Compile Include="Exercises\P8\E6.cs" />
-    <Compile Include="Exercises\P9\E8.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="src\BaseExercise.cs" />
+    <Compile Include="src\Exercises\P6\E2.cs" />
+    <Compile Include="src\Exercises\P6\E26.cs" />
+    <Compile Include="src\Exercises\P8\E6.cs" />
+    <Compile Include="src\Exercises\P9\E8.cs" />
+    <Compile Include="src\Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include=".travis.yml" />
     <Content Include="appveyor.yml" />
-    <Content Include="Exercises\P6\E2.md" />
-    <Content Include="Exercises\P6\E26.md" />
-    <Content Include="Exercises\P8\E6.md" />
+    <Content Include="README.md" />
+    <Content Include="src\Exercises\P6\E2.md" />
+    <Content Include="src\Exercises\P6\E26.md" />
+    <Content Include="src\Exercises\P8\E6.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
