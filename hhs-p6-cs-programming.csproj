@@ -41,6 +41,7 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".travis.yml" />
     <Content Include="Exercises\P6\E2.md" />
     <Content Include="Exercises\P6\E26.md" />
     <Content Include="Exercises\P8\E6.md" />

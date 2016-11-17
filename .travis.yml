@@ -1,0 +1,6 @@
+language: csharp
+solution: hhs-p6-cs-programming.sln
+mono:
+  - latest
+  - beta
+  - alpha
