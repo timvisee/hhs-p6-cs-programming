@@ -37,15 +37,13 @@
     <Compile Include="Exercises\P6\E2.cs" />
     <Compile Include="Exercises\P6\E26.cs" />
     <Compile Include="Exercises\P8\E6.cs" />
+    <Compile Include="Exercises\P9\E8.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Exercises\P6\E2.md" />
     <Content Include="Exercises\P6\E26.md" />
     <Content Include="Exercises\P8\E6.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exercises" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
