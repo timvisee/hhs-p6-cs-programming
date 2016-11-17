@@ -58,8 +58,17 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             // Print the input hint
             ShowInputHint();
 
-            // Process the input
-            return IsCorrectAnswer(Console.ReadLine());
+            try {
+                // Process the input
+                return IsCorrectAnswer(Console.ReadLine());
+
+            } catch(Exception) {
+                // Show an invalid input warning
+                Console.WriteLine("Invalid input!\n");
+
+                // Recursivly call itself, to ask for new input
+                return HandleAnswer();
+            }
         }
 
         /// <summary>
@@ -82,11 +91,8 @@ namespace hhs_p6_cs_programming.exercises.quiz {
                 valid = answerIndex > 0 && answerIndex <= _answers.Count;
 
             // Show a warning if the input is invalid, and ask for new input
-            if(!valid) {
-                // Show an invalid input warning and return
-                Console.WriteLine("Invalid input!\n");
-                return HandleAnswer();
-            }
+            if(!valid)
+                throw new Exception("Invalid input");
 
             // Check whether the answer is correct
             bool correct = _answers[answerIndex - 1].IsCorrect();
