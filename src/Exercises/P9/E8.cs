@@ -20,22 +20,22 @@ namespace hhs_p6_cs_programming.exercises.p9 {
             // Add some persons
             for(int i = 0, amount = rand.Next(3, 8); i < amount; i++)
                 people.Add(new Person(
-                        string.Format("Name{0}", nameNumber++),
+                        string.Format("Name{0}", nameNumber++.ToString()),
                         rand.Next(100)
                 ));
 
             // Add some students
             for(int i = 0, amount = rand.Next(3, 8); i < amount; i++)
                 people.Add(new Student(
-                        string.Format("Name{0}", nameNumber++),
+                        string.Format("Name{0}", nameNumber++.ToString()),
                         rand.Next(100),
-                        string.Format("Major{0}", rand.Next(1, 5))
+                        string.Format("Major{0}", rand.Next(1, 5).ToString())
                 ));
 
             // Add some instructors
             for(int i = 0, amount = rand.Next(3, 8); i < amount; i++)
                 people.Add(new Instructor(
-                        string.Format("Name{0}", nameNumber++),
+                        string.Format("Name{0}", nameNumber++.ToString()),
                         rand.Next(100),
                         (decimal) (100 + rand.NextDouble() * 900)
                 ));
@@ -157,7 +157,7 @@ namespace hhs_p6_cs_programming.exercises.p9 {
                 // Format and return the string
                 return string.Format(
                         "{0}({1})",
-                        this.GetType().Name,
+                        GetType().Name,
                         properties
                 );
             }
