@@ -58,9 +58,8 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             // Print the input hint
             ShowInputHint();
 
-            // TODO: Parse the answer input
-            Console.ReadLine();
-            return true;
+            // Process the input
+            return IsCorrectAnswer(Console.ReadLine());
         }
 
         /// <summary>
@@ -80,7 +79,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
 
             // Make sure the answer index is in-bound
             if(valid)
-                valid = answerIndex >= 0 && answerIndex < _answers.Count;
+                valid = answerIndex > 0 && answerIndex <= _answers.Count;
 
             // Show a warning if the input is invalid, and ask for new input
             if(!valid) {
@@ -90,7 +89,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             }
 
             // Check whether the answer is correct
-            bool correct = _answers[answerIndex].IsCorrect();
+            bool correct = _answers[answerIndex - 1].IsCorrect();
 
             // Check whether the answer is correct
             if(correct)
