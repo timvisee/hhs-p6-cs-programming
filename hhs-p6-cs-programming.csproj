@@ -38,6 +38,10 @@
     <Compile Include="src\Exercises\P6\E26.cs" />
     <Compile Include="src\Exercises\P8\E6.cs" />
     <Compile Include="src\Exercises\P9\E8.cs" />
+    <Compile Include="src\Exercises\Quiz\BaseQuestion.cs" />
+    <Compile Include="src\Exercises\Quiz\FixedAnswer.cs" />
+    <Compile Include="src\Exercises\Quiz\FixedQuestion.cs" />
+    <Compile Include="src\Exercises\Quiz\Quiz.cs" />
     <Compile Include="src\Program.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +53,7 @@
     <Content Include="src\Exercises\P6\E26.md" />
     <Content Include="src\Exercises\P8\E6.md" />
     <Content Include="src\Exercises\P9\E8.md" />
+    <Content Include="src\Exercises\Quiz\Quiz.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
