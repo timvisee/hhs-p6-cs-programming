@@ -33,11 +33,15 @@ namespace hhs_p6_cs_programming.exercises.p6 {
 
             // Zero even elements
             ZeroEven();
-            PrintArray("C. Zero Even");
+            PrintArray("C. Zero even");
 
             // Largest neighbor
             LargestNeighbor();
-            PrintArray("D. Largest Neighbor");
+            PrintArray("D. Largest neighbor");
+
+            // Trim the middle element
+            TrimMiddle();
+            PrintArray("E. Trim middle");
         }
 
         /// <summary>
@@ -106,6 +110,26 @@ namespace hhs_p6_cs_programming.exercises.p6 {
             // Loop through the elements, and choose the largest neighbor
             for(var i = 1; i < _intArray.Length - 1; i++)
                 _intArray[i] = Math.Max(_intArray[i - 1], _intArray[i + 1]);
+        }
+
+        /// <summary>
+        /// Trim the middle element from the array.
+        /// If the array has an even size, the middle two elements will be trimmed.
+        ///
+        /// Note: The array must contain at least 3 elements.
+        /// </summary>
+        public void TrimMiddle() {
+            // Define a new array with the correct (trimmed) size
+            int[] newArray = new int[_intArray.Length - 2 + (_intArray.Length % 2)];
+
+            // Fill the array
+            for(var i = 0; i < newArray.Length; i++)
+                newArray[i] = i < newArray.Length / 2
+                                  ? newArray[i] = _intArray[i]
+                                  : _intArray[_intArray.Length - (newArray.Length - i)];
+
+            // Update the array
+            _intArray = newArray;
         }
 
     }
