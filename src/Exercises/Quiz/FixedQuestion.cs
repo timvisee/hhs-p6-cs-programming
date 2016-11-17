@@ -54,29 +54,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             Console.Write("Enter your answer [{0}/CRTL+C]: ", inputString);
         }
 
-        public override bool HandleAnswer() {
-            // Print the input hint
-            ShowInputHint();
-
-            try {
-                // Process the input
-                return IsCorrectAnswer(Console.ReadLine());
-
-            } catch(Exception) {
-                // Show an invalid input warning
-                Console.WriteLine("Invalid input!\n");
-
-                // Recursivly call itself, to ask for new input
-                return HandleAnswer();
-            }
-        }
-
-        /// <summary>
-        /// Check whether the given answer, as a string, is correct.
-        /// </summary>
-        /// <param name="answer">Answer as a string.</param>
-        /// <returns>True if the answer is correct, false if not.</returns>
-        public bool IsCorrectAnswer(string answer) {
+        public override bool IsCorrectAnswer(string answer) {
             // Trim the answer
             answer = answer.Trim();
 
@@ -97,12 +75,6 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             // Check whether the answer is correct
             bool correct = _answers[answerIndex - 1].IsCorrect();
 
-            // Check whether the answer is correct
-            if(correct)
-                // Show the result
-                Console.WriteLine("Correct!");
-            else
-                Console.WriteLine("Wrong answer!");
 
             // Return the result
             return correct;

@@ -46,7 +46,38 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         /// Hint the user for input, and handle the user's input.
         /// </summary>
         /// <returns>True if the user was correct, false if not.</returns>
-        public abstract bool HandleAnswer();
+        public bool HandleAnswer() {
+            // Print the input hint
+            ShowInputHint();
+
+            try {
+                // Process the input
+                bool correct = IsCorrectAnswer(Console.ReadLine());
+
+                // Check whether the answer is correct
+                if(correct)
+                    Console.WriteLine("Correct!");
+                else
+                    Console.WriteLine("Wrong answer!");
+
+                // Return the result
+                return correct;
+
+            } catch(Exception) {
+                // Show an invalid input warning
+                Console.WriteLine("Invalid input!\n");
+
+                // Recursivly call itself, to ask for new input
+                return HandleAnswer();
+            }
+        }
+
+        /// <summary>
+        /// Check whether the given answer, as a string, is correct.
+        /// </summary>
+        /// <param name="answer">Answer as a string.</param>
+        /// <returns>True if the answer is correct, false if not.</returns>
+        public abstract bool IsCorrectAnswer(string answer);
 
         /// <summary>
         /// Do the question.
