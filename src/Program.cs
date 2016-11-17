@@ -21,7 +21,7 @@ namespace hhs_p6_cs_programming {
             Console.WriteLine("{0}\nDeveloped by {1}\n", AppName, DeveloperName);
 
             // Create and run an exercise
-            new hhs_p6_cs_programming.exercises.p9.E8().Start();
+            new hhs_p6_cs_programming.exercises.quiz.Quiz().Start();
         }
 
     }
