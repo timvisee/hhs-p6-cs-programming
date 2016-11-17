@@ -55,6 +55,9 @@ namespace hhs_p6_cs_programming.exercises.p6 {
 
             // Contains adjacent duplicates
             Console.WriteLine("I. Contains adjacent duplicate: {0}\n", ContainsAdjacentDuplicate());
+
+            // Contains non-adjacent duplicates
+            Console.WriteLine("J. Contains non-adjacent duplicate: {0}\n", ContainsNonAdjacentDuplicate());
         }
 
         /// <summary>
@@ -213,6 +216,22 @@ namespace hhs_p6_cs_programming.exercises.p6 {
                     return true;
 
             // Doesn't seem to contain adjacent duplicates, return
+            return false;
+        }
+
+        /// <summary>
+        /// Check whether the array contains any duplicate values, that are not adjacent to each other.
+        /// </summary>
+        /// <returns>True if it contains non-adjacent duplicate values.</returns>
+        private bool ContainsNonAdjacentDuplicate() {
+            // Check whether non-adjacent values are equal
+            for(var i = 2; i < _intArray.Length; i++)
+                // Loop through the items before this, except the adjacent one
+                for(var j = 0; j < i - 1; j++)
+                    if(_intArray[i] == _intArray[j])
+                        return true;
+
+            // Doesn't seem to contain non-adjacent duplicates, return
             return false;
         }
 
