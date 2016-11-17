@@ -47,7 +47,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
 
             // Loop through the answers, and check whether the given answer is correct
             foreach(OpenAnswer a in _answers)
-                if(a.IsCorrectAnswer(answer))
+                if(a.IsAnswer(answer))
                     return true;
 
             // The answer doesn't seem to be valid
@@ -55,17 +55,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         }
 
         public override bool IsConfigured() {
-            // At least one answer must be configured
-            if(_answers.Count <= 0)
-                return false;
-
-            // Make sure at least one of the answers is correct
-            foreach(OpenAnswer a in _answers)
-                if(a.IsCorrect())
-                    return true;
-
-            // No answer seems to be correct, the question is not configured properly
-            return false;
+            return _answers.Count > 0;
         }
 
     }

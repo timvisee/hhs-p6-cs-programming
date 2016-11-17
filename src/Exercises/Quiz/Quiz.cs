@@ -31,10 +31,7 @@ namespace hhs_p6_cs_programming.exercises.quiz {
             _questions.Add(new FixedQuestion("What letter comes after C in the alphabet?", fixedAnswers));
 
             List<OpenAnswer> openAnswers = new List<OpenAnswer>();
-            openAnswers.Add(new OpenAnswer("0", false));
-            openAnswers.Add(new OpenAnswer("1", false));
-            openAnswers.Add(new OpenAnswer("2", true));
-            openAnswers.Add(new OpenAnswer("5", false));
+            openAnswers.Add(new OpenAnswer("1"));
 
             // Create a question and add it to the list
             _questions.Add(new OpenQuestion("How many quizzes are you playing right now?", openAnswers));
