@@ -4,9 +4,7 @@ configuration:
 - Debug
 - Release
 
-platform:
-- x86
-- x64
+platform: Any CPU
 
 build:
   project: hhs-p6-cs-programming.sln
