@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Runtime.InteropServices;
 
 namespace hhs_p6_cs_programming.exercises.p9 {
     public class E8 : BaseExercise {
