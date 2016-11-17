@@ -46,6 +46,9 @@ namespace hhs_p6_cs_programming.exercises.p6 {
             // Promote even elements
             PromoteEven();
             PrintArray("F. Promote even");
+
+            // Get second largest
+            Console.WriteLine("G. Second largest: {0}", GetSecondLargest());
         }
 
         /// <summary>
@@ -156,6 +159,27 @@ namespace hhs_p6_cs_programming.exercises.p6 {
 
             // Apply the buffer
             _intArray = buff;
+        }
+
+        /// <summary>
+        /// Get the second largest element frmo the array.
+        /// </summary>
+        /// <returns>Second largest element.</returns>
+        private int GetSecondLargest() {
+            // Define an array for the largest, and second largest
+            int l = _intArray[0], s = _intArray[0];
+
+            // Loop through the array, and update the (second) largest numbers
+            for(var i = 1; i < _intArray.Length; i++)
+                if(_intArray[i] >= l) {
+                    s = l;
+                    l = _intArray[i];
+
+                }  else if(_intArray[i] > s)
+                    s = _intArray[i];
+
+            // Return the second largest value
+            return s;
         }
 
     }
