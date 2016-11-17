@@ -56,9 +56,9 @@ namespace hhs_p6_cs_programming.exercises.quiz {
 
                 // Check whether the answer is correct
                 if(correct)
-                    Console.WriteLine("Correct!");
+                    Console.WriteLine("Correct!\n");
                 else
-                    Console.WriteLine("Wrong answer!");
+                    Console.WriteLine("Wrong answer!\n");
 
                 // Return the result
                 return correct;
