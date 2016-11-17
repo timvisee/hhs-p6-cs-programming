@@ -13,7 +13,7 @@ namespace hhs_p6_cs_programming {
         /// </summary>
         public void Start() {
             // Print the exercise in the console
-            Console.WriteLine("# Exercise P{0}:\n", ExerciseIdentifier);
+            Console.WriteLine("# Exercise {0}:\n", ExerciseIdentifier);
 
             // Run the exercise
             Run();

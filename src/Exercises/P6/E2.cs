@@ -3,7 +3,7 @@
 namespace hhs_p6_cs_programming.exercises.p6 {
     public class E2 : BaseExercise {
 
-        protected override string ExerciseIdentifier { get { return "6.2"; } }
+        protected override string ExerciseIdentifier { get { return "P6.2"; } }
 
         /// <summary>
         /// Integer array this class works with.
