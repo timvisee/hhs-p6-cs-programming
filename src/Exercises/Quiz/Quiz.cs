@@ -22,22 +22,22 @@ namespace hhs_p6_cs_programming.exercises.quiz {
         protected override void Run() {
             // Add some test questions
             List<FixedAnswer> fixedAnswers = new List<FixedAnswer>();
-            fixedAnswers.Add(new FixedAnswer("Answer 1", false));
-            fixedAnswers.Add(new FixedAnswer("Answer 2", false));
-            fixedAnswers.Add(new FixedAnswer("Answer 3", true));
-            fixedAnswers.Add(new FixedAnswer("Answer 4", false));
+            fixedAnswers.Add(new FixedAnswer("Letter D", true));
+            fixedAnswers.Add(new FixedAnswer("Letter C", false));
+            fixedAnswers.Add(new FixedAnswer("Letter B", false));
+            fixedAnswers.Add(new FixedAnswer("Letter G", false));
 
             // Create a question and add it to the list
-            _questions.Add(new FixedQuestion("Question 1", fixedAnswers));
+            _questions.Add(new FixedQuestion("What letter comes after C in the alphabet?", fixedAnswers));
 
             List<OpenAnswer> openAnswers = new List<OpenAnswer>();
-            openAnswers.Add(new OpenAnswer("Answer 1", false));
-            openAnswers.Add(new OpenAnswer("Answer 2", false));
-            openAnswers.Add(new OpenAnswer("Answer 3", true));
-            openAnswers.Add(new OpenAnswer("Answer 4", false));
+            openAnswers.Add(new OpenAnswer("0", false));
+            openAnswers.Add(new OpenAnswer("1", false));
+            openAnswers.Add(new OpenAnswer("2", true));
+            openAnswers.Add(new OpenAnswer("5", false));
 
             // Create a question and add it to the list
-            _questions.Add(new OpenQuestion("Question 2", openAnswers));
+            _questions.Add(new OpenQuestion("How many quizzes are you playing right now?", openAnswers));
 
             // Run the quiz
             RunQuiz();
