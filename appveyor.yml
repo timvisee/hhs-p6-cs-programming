@@ -9,5 +9,6 @@ platform:
 - x64
 
 build:
+  project: hhs-p6-cs-programming.sln
   parallel: true
   verbosity: minimal
