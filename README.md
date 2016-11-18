@@ -7,7 +7,7 @@ C# Programming exercises for college (HHS) period 6.
 ## Build
 |Platform|Build Status|Service||
 |:---|:---:|:---|---|
-|Linux (Mono)|[![Build status on Travis CI](https://travis-ci.org/timvisee/hhs-p6-cs-programming.svg?branch=master)](https://travis-ci.org/timvisee/NotesToolbox)|Travis CI|[View Status](https://travis-ci.org/timvisee/hhs-p6-cs-programming)|
+|Linux (Mono)|[![Build status on Travis CI](https://travis-ci.org/timvisee/hhs-p6-cs-programming.svg?branch=master)](https://travis-ci.org/timvisee/hhs-p6-cs-programming)|Travis CI|[View Status](https://travis-ci.org/timvisee/hhs-p6-cs-programming)|
 |Windows|[![Build status on AppVeyor](https://ci.appveyor.com/api/projects/status/kl44a0rjffv9471k/branch/master?svg=true)](https://ci.appveyor.com/project/timvisee/hhs-p6-cs-programming)|AppVeyor|[View Status](https://ci.appveyor.com/project/timvisee/hhs-p6-cs-programming)|
 The project is currently being built automatically using the CI services in the table above.
 
